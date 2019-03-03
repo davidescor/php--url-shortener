@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+body{
+	background-color: #1fb18a;
+	font-family: 'Rajdhani', sans-serif;
+}
+hr{
+	width: 20%;
+	border: 1.2px solid white;
+}
+footer{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.f-45{
+	font-size: 45px;
+}
+.f-20{
+	font-size: 20px;
+}
+.c-white{
+	color: white;
+}
+
+.c-bg{
+	color: #1fb18a;
+}
+.m-top10{
+	margin-top: 10%;
+}
+.m-right50{
+	margin-right: 48%;
+}
+
+.input-url{
+	width: 50%;
+	padding: 12px;
+	border: none;
+}
+.bt-url{
+	margin-left: -1%;
+	padding: 12px;
+	color: white;
+	background-color: #1C2A39;
+	border: none
+}
+.bt-url:hover{
+	background-color: #243649;
+}
+
+.bt-login{
+    padding: 14px 28px;
+	color: white;
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+}
+.bt-register{
+	margin-left: 5px;
+    padding: 16px 60px;
+	color: white;
+	background-color: #1C2A39;
+	border: none;
+	font-size: 20px;
+}
+
+.bt-register:hover{
+	color: white;
+	background-color: #243649;
+}
+
+
+.bg-blue{
+	background-color: #1C2A39;
+}
+.nav-link{
+	color: white !important;
+}
+.nav-link:hover{
+	color: #ddd !important;
+}
+.c-white-footer{
+	color: white;
+}
+
+
+.no-style a:link{
+	color: white;
+}
+.no-style a:visited{
+	color: white;
+}
+.no-style{
+	color: white;
+}
+
+.hr{
+	width: 1%;
+	border: 1.2px solid white;
+}
