@@ -29,7 +29,6 @@ function num_files($res)
 function show_urls(){
 
     $email = $_SESSION["email"];
-    echo $email;
 
     $res = false;
     obtenir_inicialitzacions_bd($servidor, $usuari, $contrasenya, $bd);
@@ -43,7 +42,8 @@ function show_urls(){
         
         while ($fila)
               {
-                echo $fila[0]." <br> ".$fila[1]."  <br>   ".$fila[2]."  <br>   ".$fila[3];
+                echo $fila[0]."<br>".$fila[1]."<br>".$fila[2];
+                echo "<br><a href='http://localhost:8080/short-url/?url=".$fila[2]."'>http://localhost:8080/short-url/?url=".$fila[2]."</a><br>";
                 echo "<br><br>";
 
                 //echo "<p class='ofertas_esta'>OFERTAS EN TOTAL : ".$fila[0]."</p>";

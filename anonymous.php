@@ -41,7 +41,7 @@ $shorturl = $_SESSION["shorturl"];
   <div class="collapse navbar-collapse" id="basicExampleNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">HOME</a>
+        <a class="nav-link" href="main.php">HOME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">ABOUT</a>

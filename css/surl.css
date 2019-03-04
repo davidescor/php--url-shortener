@@ -8,6 +8,10 @@ hr{
 	width: 20%;
 	border: 1.2px solid white;
 }
+.hr2{
+	width: 2%;
+	border: 1.5px solid white;
+}
 footer{
 	width: 100%;
 	position: absolute;

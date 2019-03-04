@@ -35,7 +35,7 @@ include_once("php/model.php");
 
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark primary-color bg-blue">
-  <a class="navbar-brand" href="index.php">URL SHORTENER</a>
+  <a class="navbar-brand" href="main.php">URL SHORTENER</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@ include_once("php/model.php");
   <div class="collapse navbar-collapse" id="basicExampleNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">HOME</a>
+        <a class="nav-link" href="main.php">HOME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">ABOUT</a>
@@ -101,11 +101,10 @@ include_once("php/model.php");
 
 
 
-<footer class="text-center">
-  <hr class="hr">
+<div class="text-center">
+  <hr class="hr2">
   <p class="c-white-footer">URL-SHORTENER © COPYRIGHT BY <a class="no-style" href="www.davidespier.com">DAVID ESPIER</a></p>
-
-</footer>
+</div>
 
     <!-- BOOSTRAP JAVASCRIPT -->
 

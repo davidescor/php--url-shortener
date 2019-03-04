@@ -1,17 +1,11 @@
-
 <?php
 session_start();
-
-  if(isset($_SESSION['email']))
-  {
-    header("Location: main.php");
-  }
-
 
 include_once("php/model.php");
 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,13 +16,12 @@ include_once("php/model.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>URL SHORTENER - REGISTER</title>
+    <title>URL SHORTENER</title>
 
     <!-- BOOTSTRAP CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/surl.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/validate_register.js"></script> 
+
 
   </head>
 
@@ -37,7 +30,7 @@ include_once("php/model.php");
 
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark primary-color bg-blue">
-  <a class="navbar-brand" href="main.php">URL SHORTENER</a>
+  <a class="navbar-brand" href="index.php">URL SHORTENER</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -45,7 +38,7 @@ include_once("php/model.php");
   <div class="collapse navbar-collapse" id="basicExampleNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="main.php">HOME</a>
+        <a class="nav-link" href="index.php">HOME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">ABOUT</a>
@@ -54,11 +47,33 @@ include_once("php/model.php");
     <div class="form-inline">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">LOGIN</a>
+        <?php
+          if(isset($_SESSION['email'])){
+            echo "<a class='nav-link' href='dashboard.php'>";
+            echo($_SESSION['email']);
+            echo"</a>";
+          }
+          else{
+           echo"<a class='nav-link' href='login.php'>LOGIN</a>";
+          }
+        ?>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">REGISTER</a>
+
+      <?php
+      if(isset($_SESSION['email']))
+      {
+        echo"<a class='nav-link' href='logout.php'>LOGOUT</a>";
+      }
+      else
+      {
+       echo"<a class='nav-link' href='register.php'>REGISTER</a>";
+      }
+
+     ?>
       </li>
+
+
     </ul>
     </div>
   </div>
@@ -68,34 +83,21 @@ include_once("php/model.php");
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center f-45 c-white m-top10">
-        REGISTER
+        URL SHORTENER
       </div>
       <hr>
 
       <div class="col-md-12 text-center m-top10">
-        <form action = "" method = "post">
 
+        <form action="url.php" method="post">
 
+        <input class="input-url" type="text" name="urlcode" id="urlcode" placeholder="ENTER LONG URL...">
+        <button class="bt-url" type="submit">SHORT URL</button>
 
-          <div class="form-group">
-              <input type="text" name="username" class="input-lar" id="entryMail" placeholder="example@example.com"> 
-              <p class="error" id="mailError">Error mail</p>
-          </div>
-          <div class="form-group">
-              <input type="text" name="username" class="input-lar" id="entryName" placeholder="username" class="input-lar"> 
-              <p class="error" id="nameError">Error al nombre</p>
-          </div>
-          <div class="form-group">
-            <input type="password" name="password" class="input-lar" id="entryContra" placeholder="**********">
-            <p class="error" id="passError">Error password</p>
-          </div>
-
-          <p id="invalidCredentials"></p>
-          <input id="btn_submit" type="button" value="REGISTER"  class="bt-url">
-          <div id="text_message"></div>
         </form>
 
       </div>
+
     </div>
   </div>
 
