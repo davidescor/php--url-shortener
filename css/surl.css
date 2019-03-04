@@ -9,9 +9,10 @@ hr{
 	border: 1.2px solid white;
 }
 footer{
+   position:fixed;
+   left:0px;
+   bottom:0px;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
 	text-align: center;
 }
 
@@ -113,4 +114,13 @@ footer{
 	width: 40%;
 	padding: 12px;
 	border: none;
+}
+.f-mail{
+	font-size: 18px;
+}
+.f-link{
+	font-size: 18px;
+}
+.bg-white{
+	background-color: white;
 }

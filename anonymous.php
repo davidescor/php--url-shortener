@@ -3,8 +3,14 @@ session_start();
 
 include_once("php/model.php");
 
-$urlcode = $_SESSION["urlcode"];
-$shorturl = $_SESSION["shorturl"];
+
+if(!isset($_SESSION["urlcode"])){
+    header("Location: main.php");
+}else{
+  $urlcode = $_SESSION["urlcode"];
+  $shorturl = $_SESSION["shorturl"];
+}
+
 
 
 ?>
@@ -90,21 +96,25 @@ $shorturl = $_SESSION["shorturl"];
       </div>
       <hr>
 
-      <div class="col-md-12 text-center m-top10">
-
-        <form action="url.php" method="post">
+      <div class="col-md-12 text-center m-top10 bg-white">
+        <br>
         <?php
-        echo $urlcode;
-        echo "<br>";
-        echo $shorturl;
-        echo "<br>";
+                echo "<div class='col-md-12 f-mail'>"
+                .$urlcode.
+                "</div>
+                <div class='col-md-12 f-link'>
+                <a id='num' href='http://localhost:8080/short-url/?url=".$shorturl."'>http://localhost:8080/short-url/?url=".$shorturl."</a>";
+                echo "</div>";
+                echo "<div class='col-md-12 f-mail'>
 
-        echo "<a href='http://localhost:8080/short-url/?url=".$shorturl."'>Link</a>";
+               <button class='btn bt-url' data-clipboard-action='copy' data-clipboard-target='#num'>Copy</button>
+
+
+                </div>";
 
         session_destroy();
         ?>
-
-        </form>
+        <br>
 
       </div>
 
@@ -123,7 +133,19 @@ $shorturl = $_SESSION["shorturl"];
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="js/clipboard.min.js"></script>
+
+    <script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
   </body>
 
 </html>

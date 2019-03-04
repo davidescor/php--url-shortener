@@ -76,6 +76,7 @@ include_once("php/model.php");
       }
 
      ?>
+
       </li>
     </ul>
     </div>
@@ -90,11 +91,14 @@ include_once("php/model.php");
       </div>
       <hr>
 
-      <div class="col-md-12 text-center" style="background-color: white;">
+      <div class="col-md-12 text-center bg-white">
           <div class="row">
+
             <?php
               show_urls();
             ?>
+
+
           </div>
       </div>
 
@@ -112,7 +116,21 @@ include_once("php/model.php");
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="js/clipboard.min.js"></script>
+
+    <script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+
+
   </body>
 
 </html>

@@ -3,10 +3,6 @@ date_default_timezone_set('Europe/Madrid');
 header("Content-Type: text/html;charset=ansi");
 include_once("php/accesbd.php");
 
-function addGameToShoppingCar(){
-
-}
-
 function obtenir_inicialitzacions_bd(&$servidor, &$usuari, &$contrasenya, &$bd)
 {
     $servidor    = "localhost";
@@ -29,26 +25,33 @@ function num_files($res)
 function show_urls(){
 
     $email = $_SESSION["email"];
-
+    $num = 0;
     $res = false;
     obtenir_inicialitzacions_bd($servidor, $usuari, $contrasenya, $bd);
-    $connexio = connectar_BD($servidor, $usuari, $contrasenya, $bd);
-    if ($connexio)
+    $connect = connectar_BD($servidor, $usuari, $contrasenya, $bd);
+    if ($connect)
       {
         $instruccio = "SELECT * FROM url where user ='".$email."'";
 
-        $consulta   = consulta_multiple($connexio, $instruccio);
+        $consulta   = consulta_multiple($connect, $instruccio);
         $fila = obtenir_fila($consulta);
         
         while ($fila)
               {
-                echo "<div class='col-md-6'>"
+                echo "<div class='col-md-12 f-mail'>"
                 .$fila[1].
                 "</div>
-                <div class='col-md-6'>
-                <a href='http://localhost:8080/short-url/?url=".$fila[2]."'>http://localhost:8080/short-url/?url=".$fila[2]."</a>";
+                <div class='col-md-12 f-link'>
+                <a id='num".$num."' href='http://localhost:8080/short-url/?url=".$fila[2]."'>http://localhost:8080/short-url/?url=".$fila[2]."</a>";
                 echo "</div>";
+                echo "<div class='col-md-12 f-mail'>
 
+               <button class='btn bt-url' data-clipboard-action='copy' data-clipboard-target='#num".$num."'>COPY</button>
+
+
+                </div>";
+                $num++;
+                echo "<br><br><br>";
                 //echo "<p class='ofertas_esta'>OFERTAS EN TOTAL : ".$fila[0]."</p>";
                 $fila = obtenir_fila($consulta);
               }
@@ -56,7 +59,7 @@ function show_urls(){
         
         tancar_consulta_multiple($consulta);
       }
-    desconnectar_bd($connexio);
+    desconnectar_bd($connect);
     return ($res);
 
 }
@@ -66,14 +69,14 @@ function surl(){
 
   $res = false;
   obtenir_inicialitzacions_bd($servidor, $usuari, $contrasenya, $bd);
-  $connexio = connectar_BD($servidor, $usuari, $contrasenya, $bd);
+  $connect = connectar_BD($servidor, $usuari, $contrasenya, $bd);
 
-    if ($connexio)
+    if ($connect)
       {
 
         $instruccio = "SELECT * FROM url WHERE shorturl = '".$url."'";
 
-        $consulta   = consulta_multiple($connexio, $instruccio);
+        $consulta   = consulta_multiple($connect, $instruccio);
         $fila = obtenir_fila($consulta);
         
         while ($fila)
@@ -87,8 +90,28 @@ function surl(){
       }
 
 
-    desconnectar_bd($connexio);
+    desconnectar_bd($connect);
     return ($res);
 
 
 }
+
+function generarCodigos($cantidad=3, $longitud=10, $incluyeNum=true){ 
+    $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+    if($incluyeNum) 
+        $caracteres .= "1234567890"; 
+     
+    $arrPassResult=array(); 
+    $index=0; 
+    while($index<$cantidad){ 
+        $tmp=""; 
+        for($i=0;$i<$longitud;$i++){ 
+            $tmp.=$caracteres[rand(0,strlen($caracteres)-1)]; 
+        } 
+        if(!in_array($tmp, $arrPassResult)){ 
+            $arrPassResult[]=$tmp; 
+            $index++; 
+        } 
+    } 
+    return $tmp; 
+}  
