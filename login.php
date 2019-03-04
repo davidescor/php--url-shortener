@@ -94,7 +94,7 @@ include_once("php/model.php");
 
 
 
-<footer class="text-center">
+<footer class="text-center footer">
   <hr class="hr">
   <p class="c-white-footer">URL-SHORTENER © COPYRIGHT BY <a class="no-style" href="www.davidespier.com">DAVID ESPIER</a></p>
 
