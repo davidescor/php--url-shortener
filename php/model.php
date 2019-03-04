@@ -25,30 +25,27 @@ function num_files($res)
   return ($quants);
 }
 
-function gamelist()
-{
+
+function show_urls(){
+
+    $email = $_SESSION["email"];
+    echo $email;
+
     $res = false;
     obtenir_inicialitzacions_bd($servidor, $usuari, $contrasenya, $bd);
     $connexio = connectar_BD($servidor, $usuari, $contrasenya, $bd);
     if ($connexio)
       {
-        $instruccio = "SELECT * FROM game";
+        $instruccio = "SELECT * FROM url where user ='".$email."'";
 
         $consulta   = consulta_multiple($connexio, $instruccio);
         $fila = obtenir_fila($consulta);
         
         while ($fila)
               {
-                echo '<div class="col-md-3 filter TODOS NINTENDO shadowB">
-                        <a href="game.php" class="custom-card">
-                        <div class="card" style="border: none;">
-                        <img class="card-img-top" src="'.$fila[6].'" alt="Card image cap">
-                        <p class="nameGame">'.$fila[1].'</p>
-                        <p class="points">+'.$fila[4].' PUNTOS DE COMPRA</p>
-                        <p class="precio">'.$fila[5].'</p>
-                        </div>
-                        </a>
-                      </div>';
+                echo $fila[0]." <br> ".$fila[1]."  <br>   ".$fila[2]."  <br>   ".$fila[3];
+                echo "<br><br>";
+
                 //echo "<p class='ofertas_esta'>OFERTAS EN TOTAL : ".$fila[0]."</p>";
                 $fila = obtenir_fila($consulta);
               }
@@ -58,4 +55,37 @@ function gamelist()
       }
     desconnectar_bd($connexio);
     return ($res);
+
+}
+
+function surl(){
+  $url = $_GET['url'];
+
+  $res = false;
+  obtenir_inicialitzacions_bd($servidor, $usuari, $contrasenya, $bd);
+  $connexio = connectar_BD($servidor, $usuari, $contrasenya, $bd);
+
+    if ($connexio)
+      {
+
+        $instruccio = "SELECT * FROM url WHERE shorturl = '".$url."'";
+
+        $consulta   = consulta_multiple($connexio, $instruccio);
+        $fila = obtenir_fila($consulta);
+        
+        while ($fila)
+              {
+                header("Location: ".$fila[1]."");
+                $fila = obtenir_fila($consulta);
+              }
+          
+        
+        tancar_consulta_multiple($consulta);
+      }
+
+
+    desconnectar_bd($connexio);
+    return ($res);
+
+
 }

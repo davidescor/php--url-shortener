@@ -3,13 +3,8 @@ session_start();
 
 include_once("php/model.php");
 
-
-if(isset($_GET['url'])){
-
-
-  surl();
-
-}
+$urlcode = $_SESSION["urlcode"];
+$shorturl = $_SESSION["shorturl"];
 
 
 ?>
@@ -98,9 +93,16 @@ if(isset($_GET['url'])){
       <div class="col-md-12 text-center m-top10">
 
         <form action="url.php" method="post">
+        <?php
+        echo $urlcode;
+        echo "<br>";
+        echo $shorturl;
+        echo "<br>";
 
-        <input class="input-url" type="text" name="urlcode" id="urlcode" placeholder="ENTER LONG URL...">
-        <button class="bt-url" type="submit">SHORT URL</button>
+        echo "<a href='http://localhost:8080/short-url/?url=".$shorturl."'>Link</a>";
+
+        session_destroy();
+        ?>
 
         </form>
 

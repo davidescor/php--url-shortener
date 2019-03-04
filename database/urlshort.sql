@@ -8,11 +8,11 @@ CREATE TABLE user (
 
 CREATE TABLE url (
     user varchar(100),
-    url varchar(500) UNIQUE,
+    url varchar(500),
     shorturl varchar(15),
     hit int,
     created DATETIME,
-    UNIQUE(url)
+    UNIQUE(shorturl)
 );
 
 INSERT INTO user VALUES ('davidespier@gmail.com', 'davidespier', '12345678');

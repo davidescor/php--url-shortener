@@ -90,8 +90,10 @@ include_once("php/model.php");
       </div>
       <hr>
 
-      <div class="col-md-12 text-center m-top10">
-
+      <div class="col-md-12 text-center">
+        <?php
+          show_urls();
+        ?>
       </div>
 
     </div>
