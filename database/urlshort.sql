@@ -15,3 +15,4 @@ CREATE TABLE url (
 );
 
 INSERT INTO user VALUES ('davidespier@gmail.com', '12345678');
+INSERT INTO url VALUES ('davidespier@gmail.com', 'https://www.google.es/','ggl',0,'04/03/2019');
