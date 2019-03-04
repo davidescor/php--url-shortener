@@ -17,10 +17,6 @@ if (isset($_POST["email"]) && isset($_POST["password"]))
 		$data = mysqli_fetch_array($result);
 		
 		$_SESSION["email"] = $data[0];
-		/*
-		$_SESSION["user_name"] = $data["user_name"];
-		$_SESSION["surname"] = $data["surname"];
-		*/
 		echo "001";
 	}
 	else

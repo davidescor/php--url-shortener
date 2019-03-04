@@ -54,10 +54,10 @@ include_once("php/model.php");
     <div class="form-inline">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">LOGIN</a>
+        <a class="nav-link" href="login.php">LOGIN</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">REGISTER</a>
+        <a class="nav-link" href="register.php">REGISTER</a>
       </li>
     </ul>
     </div>
@@ -80,10 +80,6 @@ include_once("php/model.php");
           <div class="form-group">
               <input type="text" name="username" class="input-lar" id="entryMail" placeholder="example@example.com"> 
               <p class="error" id="mailError">Error mail</p>
-          </div>
-          <div class="form-group">
-              <input type="text" name="username" class="input-lar" id="entryName" placeholder="username" class="input-lar"> 
-              <p class="error" id="nameError">Error al nombre</p>
           </div>
           <div class="form-group">
             <input type="password" name="password" class="input-lar" id="entryContra" placeholder="**********">

@@ -1,9 +1,8 @@
 
 CREATE TABLE user (
     email varchar(100),
-    user varchar(100),
     password varchar(100),
-    UNIQUE(email,user)
+    UNIQUE(email)
 );
 
 CREATE TABLE url (
@@ -15,4 +14,4 @@ CREATE TABLE url (
     UNIQUE(shorturl)
 );
 
-INSERT INTO user VALUES ('davidespier@gmail.com', 'davidespier', '12345678');
+INSERT INTO user VALUES ('davidespier@gmail.com', '12345678');

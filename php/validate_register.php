@@ -2,7 +2,6 @@
 	$connect = mysqli_connect("localhost", "root", "usbw", "urlshort");
 
 	$correo = $_POST["email"];
-	$nombre = $_POST["nombre"];
 	$pass = $_POST["password"];
 
 
@@ -18,7 +17,7 @@
 
 			//$pass_hash = hash("md5","$pass");				
 
-			$sql3 = "insert INTO user (email,user,password)VALUES('$correo', '$nombre', '$pass')";
+			$sql3 = "insert INTO user (email,password)VALUES('$correo', '$pass')";
 
 			if (mysqli_query($connect,$sql3))
 			{	

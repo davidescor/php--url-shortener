@@ -54,10 +54,10 @@ include_once("php/model.php");
     <div class="form-inline">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">LOGIN</a>
+        <a class="nav-link" href="login.php">LOGIN</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">REGISTER</a>
+        <a class="nav-link" href="register.php">REGISTER</a>
       </li>
     </ul>
     </div>

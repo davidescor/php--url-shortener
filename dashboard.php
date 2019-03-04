@@ -90,10 +90,12 @@ include_once("php/model.php");
       </div>
       <hr>
 
-      <div class="col-md-12 text-center">
-        <?php
-          show_urls();
-        ?>
+      <div class="col-md-12 text-center" style="background-color: white;">
+          <div class="row">
+            <?php
+              show_urls();
+            ?>
+          </div>
       </div>
 
     </div>
@@ -101,10 +103,10 @@ include_once("php/model.php");
 
 
 
-<div class="text-center">
-  <hr class="hr2">
+<footer class="text-center">
+  <hr class="hr">
   <p class="c-white-footer">URL-SHORTENER © COPYRIGHT BY <a class="no-style" href="www.davidespier.com">DAVID ESPIER</a></p>
-</div>
+</footer>
 
     <!-- BOOSTRAP JAVASCRIPT -->
 

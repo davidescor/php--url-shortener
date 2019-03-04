@@ -42,9 +42,12 @@ function show_urls(){
         
         while ($fila)
               {
-                echo $fila[0]."<br>".$fila[1]."<br>".$fila[2];
-                echo "<br><a href='http://localhost:8080/short-url/?url=".$fila[2]."'>http://localhost:8080/short-url/?url=".$fila[2]."</a><br>";
-                echo "<br><br>";
+                echo "<div class='col-md-6'>"
+                .$fila[1].
+                "</div>
+                <div class='col-md-6'>
+                <a href='http://localhost:8080/short-url/?url=".$fila[2]."'>http://localhost:8080/short-url/?url=".$fila[2]."</a>";
+                echo "</div>";
 
                 //echo "<p class='ofertas_esta'>OFERTAS EN TOTAL : ".$fila[0]."</p>";
                 $fila = obtenir_fila($consulta);

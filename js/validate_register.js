@@ -1,24 +1,14 @@
 $(document).ready(function() {
 
-	var control_name = false;
 	var control_email = false;
 	var control_password = false;
 
-	var nombre = "";
 	var email = "";
 	var password = "";
 
-	$("#nameError").hide();
 	$("#mailError").hide();
 	$("#passError").hide();
 
-
-
-	$("#entryName").focusout(function() {
-
-		checkName();
-
-	});
 
 
 	$("#entryMail").focusout(function() {
@@ -38,15 +28,15 @@ $(document).ready(function() {
 
 	$("#btn_submit").click(function() {
 
-		if (control_name == true && control_email == true && control_password == true)
+		if (control_email == true && control_password == true)
 		{
 			$.ajax({
 				url: "php/validate_register.php",
 				method: "POST",
-				data:{email:email,password:password,nombre:nombre},
+				data:{email:email,password:password},
 				cache : "false",
 				beforeSend:function() {
-					$("#btn_submit").val("Registrando...");
+					$("#btn_submit").val("Registering...");
 				},
 				success:function(data) {
 					if(data  == "1")
@@ -69,25 +59,6 @@ $(document).ready(function() {
 		}
 
 	});
-
-
-	function checkName()
-	{
-		nombre = $("#entryName").val().length;
-		if (nombre < 4)
-		{	
-			control_name = false;
-			$("#nameError").html("Minimum 4 characters.");
-			$("#nameError").show();
-				
-		}
-		else
-		{
-			nombre = $("#entryName").val();
-			control_name = true;
-			$("#nameError").hide();
-		}
-	}
 
 
 	function chekEmail()
