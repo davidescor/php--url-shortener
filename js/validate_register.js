@@ -46,7 +46,7 @@ $(document).ready(function() {
 					}
 					else if (data == "2")
 					{
-						$(location).attr("href","dashboard.php");
+						$(location).attr("href","main.php");
 					}
 
 				}

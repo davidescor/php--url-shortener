@@ -15,7 +15,12 @@ include_once("php/model.php");
 <html lang="es">
 
   <head>
-
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon" href="img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico" type="image/ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
