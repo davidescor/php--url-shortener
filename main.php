@@ -96,7 +96,7 @@ include_once("php/model.php");
 
         <form action="url.php" method="post">
 
-        <input class="input-url" type="text" name="urlcode" id="urlcode" placeholder="ENTER LONG URL...">
+        <input class="input-url" type="url" name="urlcode" id="urlcode" placeholder="ENTER LONG URL...">
         <button class="bt-url" type="submit">SHORT URL</button>
 
         </form>
