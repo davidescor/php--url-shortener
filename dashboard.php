@@ -110,8 +110,7 @@ include_once("php/model.php");
     </div>
   </div>
 
-  
-
+<br>
 <footer class="text-center">
   <p class="c-white-footer">URL-SHORTENER © COPYRIGHT BY <a class="no-style" href="www.davidespier.com">DAVID ESPIER</a></p>
 </footer>

@@ -127,11 +127,9 @@ if(!isset($_SESSION["urlcode"])){
   </div>
 
 
-
+<br>
 <footer class="text-center">
-  <hr class="hr">
   <p class="c-white-footer">URL-SHORTENER © COPYRIGHT BY <a class="no-style" href="www.davidespier.com">DAVID ESPIER</a></p>
-
 </footer>
 
     <!-- BOOSTRAP JAVASCRIPT -->
