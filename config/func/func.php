@@ -1,15 +1,4 @@
 <?php
-date_default_timezone_set('Europe/Madrid');
-header("Content-Type: text/html;charset=ansi");
-include_once("php/accesbd.php");
-
-function obtenir_inicialitzacions_bd(&$servidor, &$usuari, &$contrasenya, &$bd)
-{
-    $servidor    = "localhost";
-    $usuari      = "root";
-    $contrasenya = "usbw";
-    $bd          = "urlshort";
-}
 
 function num_files($res)
 {
@@ -20,7 +9,6 @@ function num_files($res)
     }
   return ($quants);
 }
-
 
 function show_urls(){
 
@@ -42,7 +30,7 @@ function show_urls(){
                 .$fila[1].
                 "</div>
                 <div class='col-md-12 f-link'>
-                <a id='num".$num."' href='http://localhost:8080/short-url/?url=".$fila[2]."'>http://localhost:8080/short-url/?url=".$fila[2]."</a>";
+                <a id='num".$num."' href='index.php?url=".$fila[2]."'>your-domain.com/index.php?url=".$fila[2]."</a>";
                 echo "</div>";
                 echo "<div class='col-md-12 f-mail'>
 
@@ -115,3 +103,5 @@ function generarCodigos($cantidad=3, $longitud=10, $incluyeNum=true){
     } 
     return $tmp; 
 }  
+
+?>

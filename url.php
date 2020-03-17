@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include_once("php/accesbd.php");
-include_once("php/model.php");
+include_once("config/database/accesbd.php");
+include_once("config/config.php");
 
 
 $urlcode = $_POST["urlcode"];

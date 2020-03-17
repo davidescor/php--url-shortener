@@ -1,6 +1,8 @@
 <?php
-date_default_timezone_set('Europe/Madrid');
-header("Content-Type: text/html;charset=ansi");
+	date_default_timezone_set('Europe/Madrid');
+
+	header("Content-Type: text/html;charset=ansi");
+
 	//Fitxer de funcions d'accés a base de dades.
 
 	//Connecta a la base de dades del servidor indicat, amb l'usuari i contrasenya que se li passi

@@ -1,5 +1,5 @@
 <?php
-	$connect = mysqli_connect("localhost", "root", "usbw", "urlshort");
+	$connect = mysqli_connect("localhost", "root", "usbw", "shorturl");
 
 	$correo = $_POST["email"];
 	$pass = $_POST["password"];

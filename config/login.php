@@ -1,6 +1,6 @@
 <?php
 
-$connect = mysqli_connect("localhost", "root", "usbw", "urlshort");
+$connect = mysqli_connect("localhost", "root", "usbw", "shorturl");
 
 if (isset($_POST["email"]) && isset($_POST["password"]))
 {

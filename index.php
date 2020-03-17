@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once("php/model.php");
+include_once("config/config.php");
 
 
 if(isset($_GET['url'])){

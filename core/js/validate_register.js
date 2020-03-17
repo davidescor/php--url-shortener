@@ -31,7 +31,7 @@ $(document).ready(function() {
 		if (control_email == true && control_password == true)
 		{
 			$.ajax({
-				url: "php/validate_register.php",
+				url: "config/register.php",
 				method: "POST",
 				data:{email:email,password:password},
 				cache : "false",

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once("php/model.php");
+include_once("config/config.php");
 
 
 if(!isset($_SESSION["urlcode"])){
@@ -19,12 +19,12 @@ if(!isset($_SESSION["urlcode"])){
 <html lang="es">
 
   <head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
-    <link rel="apple-touch-icon" href="img/favicon.ico" type="image/ico" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon.ico" type="image/ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon.ico" type="image/ico">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon.ico" type="image/ico">
-    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="core/img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon" href="core/img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="core/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="core/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="core/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" href="core/img/favicon.ico" type="image/ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -33,8 +33,8 @@ if(!isset($_SESSION["urlcode"])){
     <title>URL SHORTENER</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/surl.css" rel="stylesheet">
+    <link href="core/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="core/css/surl.css" rel="stylesheet">
 
 
   </head>
@@ -108,7 +108,7 @@ if(!isset($_SESSION["urlcode"])){
                 .$urlcode.
                 "</div>
                 <div class='col-md-12 f-link'>
-                <a id='num' href='http://localhost:8080/short-url/?url=".$shorturl."'>http://localhost:8080/short-url/?url=".$shorturl."</a>";
+                <a id='num' href='index.php/?url=".$shorturl."'>your-domain.com/index.php?url=".$shorturl."</a>";
                 echo "</div>";
                 echo "<div class='col-md-12 f-mail'>
 
@@ -134,9 +134,9 @@ if(!isset($_SESSION["urlcode"])){
 
     <!-- BOOSTRAP JAVASCRIPT -->
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/clipboard.min.js"></script>
+    <script src="core/vendor/jquery/jquery.min.js"></script>
+    <script src="core/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="core/js/clipboard.min.js"></script>
 
     <script>
     var clipboard = new ClipboardJS('.btn');

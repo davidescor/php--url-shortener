@@ -7,7 +7,7 @@ session_start();
   }
 
 
-include_once("php/model.php");
+include_once("config/config.php");
 
 
 ?>
@@ -15,12 +15,12 @@ include_once("php/model.php");
 <html lang="es">
 
   <head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
-    <link rel="apple-touch-icon" href="img/favicon.ico" type="image/ico" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon.ico" type="image/ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon.ico" type="image/ico">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon.ico" type="image/ico">
-    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="core/img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon" href="core/img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="core/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="core/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="core/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" href="core/img/favicon.ico" type="image/ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -29,8 +29,8 @@ include_once("php/model.php");
     <title>URL SHORTENER - DASHBOARD</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/surl.css" rel="stylesheet">
+    <link href="core/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="core/css/surl.css" rel="stylesheet">
 
 
   </head>
@@ -117,9 +117,9 @@ include_once("php/model.php");
 
     <!-- BOOSTRAP JAVASCRIPT -->
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/clipboard.min.js"></script>
+    <script src="core/vendor/jquery/jquery.min.js"></script>
+    <script src="core/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="core/js/clipboard.min.js"></script>
 
     <script>
     var clipboard = new ClipboardJS('.btn');

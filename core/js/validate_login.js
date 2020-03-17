@@ -7,7 +7,7 @@ $(document).ready(function() {
 		if ($.trim(email).length > 0 && $.trim(password).length > 0)
 		{	
 			$.ajax({
-				url: "php/validate_login.php",
+				url: "config/login.php",
 				method: "POST",
 				data:{email:email, password:password},
 				cache: "false",
