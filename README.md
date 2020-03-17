@@ -34,7 +34,7 @@ Save your images in the cloud.  Project made with javascript and firebase.
 
 ## Website project
 
-http://davidespier.com/pages/shorturl/main.php
+http://davidespier.com/pages/urlshortener/main.php
 
 
 ## Authors
