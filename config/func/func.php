@@ -30,7 +30,7 @@ function show_urls(){
                 .$fila[1].
                 "</div>
                 <div class='col-md-12 f-link'>
-                <a id='num".$num."' href='index.php?url=".$fila[2]."'>your-domain.com/index.php?url=".$fila[2]."</a>";
+                <a id='num".$num."' href='index.php?url=".$fila[2]."'>http://your-domain.com/index.php?url==".$fila[2]."</a>";
                 echo "</div>";
                 echo "<div class='col-md-12 f-mail'>
 
