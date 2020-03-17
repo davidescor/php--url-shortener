@@ -5,34 +5,32 @@ Save your images in the cloud.  Project made with javascript and firebase.
 
 ## Requirements
 
-- Php 5.6+.
+- Php 5.6.
 - Mysql.
 
-(You can use usbwebserver or xampp)
+(You can use usbwebserver, xampp or hosting web)
 
 
 ## Installation
 
 1. Upload file (/database) in your database.
 
-2. Update (/php) files model, register and login, access data from the database.
+2. Update (/config) files config, register and login, access data from the database.
 
 3. Add your domain in this line of code.
 
                
    Line 111 (/anonymous.php).
 
-        <a id='num' href='your-domain/index.php?url=".$shorturl."'>your-domain/index.php?url=".$shorturl."</a>";
+       <a id='num' href='index.php/?url=".$shorturl."'>http://your-domain.com/index.php?url=".$shorturl."</a>";
 
-   Line 45 (/model.php)
+
+   Line 33 (/config/func/func.php)
    
-        <a id='num' href='your-domain/index.php?url=".$shorturl."'>your-domain/index.php?url=".$shorturl."</a>";
+        <a id='num' href='your-domain/index.php?url=".$shorturl."'>http://your-domain/index.php?url=".$shorturl."</a>";
+       
         
 4. Run
-
-```bash
-At this time it is not available.
-```
 
 ## Website project
 
@@ -40,8 +38,6 @@ http://davidespier.com/pages/shorturl/main.php
 
 
 ## Authors
-
-
 
  *Developed and designed by*  **David Espier**
 
