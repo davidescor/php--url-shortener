@@ -22,12 +22,12 @@ Save your images in the cloud.  Project made with javascript and firebase.
                
    Line 111 (/anonymous.php).
 
-        <a id='num' href='your-domain/index.php?url=".$shorturl."'>http://your-domain/index.php?url=".$shorturl."</a>";
+        <a id='num' href='index.php?url=".$shorturl."'>http://your-domain/index.php?url=".$shorturl."</a>";
 
 
    Line 33 (/config/func/func.php)
    
-        <a id='num' href='your-domain/index.php?url=".$shorturl."'>http://your-domain/index.php?url=".$shorturl."</a>";
+        <a id='num' href='index.php?url=".$shorturl."'>http://your-domain/index.php?url=".$shorturl."</a>";
        
         
 4. Run
