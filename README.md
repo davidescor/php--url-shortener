@@ -1,4 +1,4 @@
-![url-shortener](http://davidespier.com/img/appweb/shorturl.png)
+![url-shortener](http://davidespier.com/github/url.jpg)
 
 # URL-SHORTENER
 Save your images in the cloud.  Project made with javascript and firebase.
