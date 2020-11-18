@@ -15,21 +15,10 @@ Save your images in the cloud.  Project made with javascript and firebase.
 
 1. Upload file (/database) in your database.
 
-2. Update (/config) files config, register and login, access data from the database.
+2. Update (/config) files config.php, register.php and login.php, access data from the database.
 
-3. Add your domain in this line of code.
+3. Add your domain in this file (/config/config.php)
 
-               
-   Line 111 (/anonymous.php).
-
-        <a id='num' href='index.php?url=".$shorturl."'>http://your-domain/index.php?url=".$shorturl."</a>";
-
-
-   Line 33 (/config/func/func.php)
-   
-        <a id='num' href='index.php?url=".$shorturl."'>http://your-domain/index.php?url=".$shorturl."</a>";
-       
-        
 4. Run
 
 ## Website project
