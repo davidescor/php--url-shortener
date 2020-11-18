@@ -108,7 +108,7 @@ if(!isset($_SESSION["urlcode"])){
                 .$urlcode.
                 "</div>
                 <div class='col-md-12 f-link'>
-                <a id='num' href='index.php/?url=".$shorturl."'>http://your-domain.com/index.php?url=".$shorturl."</a>";
+                <a id='num' href='index.php/?url=".$shorturl."'>".$domain."/index.php?url=".$shorturl."</a>";
                 echo "</div>";
                 echo "<div class='col-md-12 f-mail'>
 

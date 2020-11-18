@@ -4,9 +4,11 @@ date_default_timezone_set('Europe/Madrid');
 
 header("Content-Type: text/html;charset=ansi");
 
+
 include_once("config/database/accesbd.php");
 include_once("config/func/func.php");
 
+$domain = "localhost";
 
 function obtenir_inicialitzacions_bd(&$servidor, &$usuari, &$contrasenya, &$bd)
 {

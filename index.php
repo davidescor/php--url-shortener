@@ -3,6 +3,7 @@ session_start();
 
 include_once("config/config.php");
 
+$_SESSION["domain"] = $domain; 
 
 if(isset($_GET['url'])){
 
