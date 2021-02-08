@@ -3,21 +3,17 @@ session_start();
 
 include_once("config/config.php");
 
-
-if(!isset($_SESSION["urlcode"])){
-    header("Location: main.php");
-}else{
-  $urlcode = $_SESSION["urlcode"];
-  $shorturl = $_SESSION["shorturl"];
-}
-
-
+  if(!isset($_SESSION["urlcode"])){
+      header("Location: main.php");
+  }else{
+    $urlcode = $_SESSION["urlcode"];
+    $shorturl = $_SESSION["shorturl"];
+  }
 
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
     <link rel="shortcut icon" href="core/img/favicon.ico" type="image/ico" />
     <link rel="apple-touch-icon" href="core/img/favicon.ico" type="image/ico" />
@@ -35,10 +31,7 @@ if(!isset($_SESSION["urlcode"])){
     <!-- BOOTSTRAP CSS -->
     <link href="core/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="core/css/surl.css" rel="stylesheet">
-
-
   </head>
-
   <body>
 
 
@@ -60,34 +53,6 @@ if(!isset($_SESSION["urlcode"])){
     </ul>
     <div class="form-inline">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <?php
-          if(isset($_SESSION['email'])){
-            echo "<a class='nav-link' href='dashboard.php'>";
-            echo($_SESSION['email']);
-            echo"</a>";
-          }
-          else{
-           echo"<a class='nav-link' href='login.php'>LOGIN</a>";
-          }
-        ?>
-      </li>
-      <li class="nav-item">
-
-      <?php
-      if(isset($_SESSION['email']))
-      {
-        echo"<a class='nav-link' href='logout.php'>LOGOUT</a>";
-      }
-      else
-      {
-       echo"<a class='nav-link' href='register.php'>REGISTER</a>";
-      }
-
-     ?>
-      </li>
-
-
     </ul>
     </div>
   </div>
@@ -109,7 +74,7 @@ if(!isset($_SESSION["urlcode"])){
                 "</div>
                 <div class='col-md-12 f-link'>
                 <a id='num' href='index.php/?url=".$shorturl."'>".$domain."/index.php?url=".$shorturl."</a>";
-                echo "</div>";
+                echo "</div><br>";
                 echo "<div class='col-md-12 f-mail'>
 
                <button class='btn bt-url' data-clipboard-action='copy' data-clipboard-target='#num'>Copy</button>

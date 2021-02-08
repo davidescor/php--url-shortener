@@ -42,7 +42,7 @@ $connect = connectar_BD($servidor, $usuari, $contrasenya, $bd);
                   {
                     header("Location: dashboard.php");
                   }else{
-                    header("Location: anonymous.php");
+                    header("Location: shared.php");
 
                     $_SESSION["urlcode"] = $urlcode;
                     $_SESSION["shorturl"] = $shorturl; 

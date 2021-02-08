@@ -51,34 +51,6 @@ include_once("config/config.php");
     </ul>
     <div class="form-inline">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <?php
-          if(isset($_SESSION['email'])){
-            echo "<a class='nav-link' href='dashboard.php'>";
-            echo($_SESSION['email']);
-            echo"</a>";
-          }
-          else{
-           echo"<a class='nav-link' href='login.php'>LOGIN</a>";
-          }
-        ?>
-      </li>
-      <li class="nav-item">
-
-      <?php
-      if(isset($_SESSION['email']))
-      {
-        echo"<a class='nav-link' href='logout.php'>LOGOUT</a>";
-      }
-      else
-      {
-       echo"<a class='nav-link' href='register.php'>REGISTER</a>";
-      }
-
-     ?>
-      </li>
-
-
     </ul>
     </div>
   </div>
