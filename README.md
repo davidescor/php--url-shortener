@@ -15,7 +15,7 @@ Save your images in the cloud.  Project made with javascript and firebase.
 
 1. Upload file (/database) in your database.
 
-2. Update (/config) files config.php, register.php and login.php, access data from the database.
+2. Update (/config) files config.php, access data from the database.
 
 3. Add your domain in this file (/config/config.php)
 
