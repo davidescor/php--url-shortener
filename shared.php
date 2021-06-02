@@ -58,7 +58,7 @@ include_once("config/config.php");
   </div>
 </nav>
 
-
+<div class="mid">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center f-45 c-white m-top10">
@@ -90,10 +90,9 @@ include_once("config/config.php");
 
     </div>
   </div>
+</div>
 
-
-<br>
-<footer class="text-center">
+<footer class="text-center footer">
   <p class="c-white-footer">URL-SHORTENER © COPYRIGHT BY <a class="no-style" href="www.davidespier.com">DAVID ESPIER</a></p>
 </footer>
 

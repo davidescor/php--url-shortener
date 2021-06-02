@@ -56,10 +56,10 @@ include_once("config/config.php");
   </div>
 </nav>
 
-
+<div class="mid">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center f-45 c-white m-top10">
+      <div class="col-md-12 text-center f-45 c-white">
         URL SHORTENER
       </div>
       <hr>
@@ -77,7 +77,7 @@ include_once("config/config.php");
 
     </div>
   </div>
-
+</div>
 
 
 <footer class="text-center footer">
