@@ -1,7 +1,9 @@
-![url-shortener](https://i.postimg.cc/wB4FhsmH/url.jpg)
+![url-shortener](https://i.postimg.cc/nzD2N72W/url1.png)
+<img src="https://i.postimg.cc/T1j936Zq/url2.png"/>
 
 # URL-SHORTENER
-Save your images in the cloud.  Project made with javascript and firebase.
+Create short URLs that can be sent or shared in an easier way.
+
 
 ## Requirements
 
